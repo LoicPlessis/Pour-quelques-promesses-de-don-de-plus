@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Page_formulaire</title>
+		<link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='style2.css') }}"> 
+    </head>
+<body>
+    <form method="get" action="{{url_for('ajouter')}}">
+        <a href="{{ url_for('index') }}">Accueil</a>
+
+    <fieldset>
+    <div>
+        <legend> Vos informations: </legend>
+        <br>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="Nom" required>
+    </div>
+    <div><label for="prenom">Prenom :</label>
+        <input type="text" id="prenom" name="Prenom" required></div>
+    <div>
+        <label for="age">Age :</label>
+        <input type="text" id="age" name="Age" required=>
+        <div>
+            <label for="genre">Choisissez un genre :</label>
+            <select id="Genre"  name="Genre" required>
+                <option value="F" >Femme</option>
+                <option value="H" >Homme</option>
+             </select>
+        </div>
+    </div>
+    <div>
+        <label for="mail">E-mail :</label>
+        <input type="email" id="mail" name="Email" required>
+    </div>
+
+    <div> <label for="numéro de téléphone">Numéro de téléphone :</label>
+        <input type="numéro_tel" id="numéro téléphone" name="Numero_tel" required>
+    </div>
+     
+    <div>
+        <label for="don">Montant de votre don :</label>
+        <input type="don" id="don" name="Montant" required>
+    
+        <div class="espaceEntDiv alignerGauche">
+            <input required type="checkbox" id="redoublant" name="redoublant" value="1"/>
+            <label for="reboublant">j'accepte les termes et conditions<span class="rouge">*</pan></label>
+            </div>
+     </fieldset>
+       
+     <div> 
+        <input type="submit" value="Envoyer" />
+    </div>
+</form>
+</body>
+</html>
+
+
+
+
+

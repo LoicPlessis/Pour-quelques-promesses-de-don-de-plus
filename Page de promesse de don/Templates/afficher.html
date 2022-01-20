@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='style.css') }}"> 
+    <title>Donateurs</title>
+</head>
+<body>
+    <div class="m">
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('formulaire') }}">Page de dons</a>
+    </div>
+    <h1>Liste des Donateurs</h1>
+    
+    <h2> l'association a récolté {{total}} euros</h2>
+    {% for i in utilisateurs %} 
+        <h3>{{i['Nom']}}</h3>
+        <h3>{{i['Prenom']}}</h3>
+        <h3>{{i['Montant']}}</h3>
+    {%endfor %}
+</body>
+</html>
+    
+</body>
+</html>
